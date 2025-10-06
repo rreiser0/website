@@ -1,39 +1,80 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
 }
 
-/* Canvas container styling */
-#canvas-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Places it behind other content */
+.container {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 1%;
+    left: 0;
+    z-index: 1000;
+    gap: 1%;
+    padding: 0 1%;
+    box-sizing: border-box;
 }
 
-main {
-  position: relative; /* Needed for z-index to work */
-  width: 100%;
-  height: 97%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1; /* Places it above the canvas */
+.dropdown {
+    flex: 1;
+    max-width: 24%;
+    position: relative;
 }
 
-h1 {
-  color: white; /* Make text visible against dark background */
-  text-align: center;
+.dropdown button {
+    background-color: rgb(111, 114, 184);
+    font-size: large;
+    color: white;
+    margin-top: 6px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
 }
 
-canvas {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
+.dropdown a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: rgb(218, 220, 227);
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.664);
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .content {
+    display: block;
+    font-size: large;
+}
+
+.dropdown:hover button {
+    background-color: rgb(135, 135, 194);
+}
+
+.dropdown a:hover {
+    background-color: rgb(135, 135, 194);
+}
+
+img, p {
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 1%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: large;
+}
+
+#PDF {
+    margin-top: 30px;
+    width: 100%;
+    height: 780px;
 }
